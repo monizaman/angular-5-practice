@@ -1,0 +1,24 @@
+<h3>Click and then Click to test Animation</h3>
+<ul [ngClass]= "'sub-menu'">
+   <li *ngFor="let book of books | async" [@onOff1Trigger] = "book.state" (click)="toggle(book)"> 
+	   <a>{{book.name}}</a>
+   </li>
+</ul>
+<br/>
+<ul [ngClass]= "'sub-menu'">
+   <li *ngFor="let book of books | async" [@onOff2Trigger] = "book.state" (click)="toggle(book)"> 
+	   <a>{{book.name}}</a>
+   </li>
+</ul>
+<br/>
+<ul [ngClass]= "'sub-menu'">
+   <li *ngFor="let book of books | async" [@onOff3Trigger] = "book.state" (click)="toggle(book)"> 
+	   <a>{{book.name}}</a>
+   </li>
+</ul>
+<br/>
+<ul [ngClass]= "'sub-menu'">
+   <li *ngFor="let book of books | async" [@onOff4Trigger] = "book.state" (click)="toggle(book)"> 
+	   <a>{{book.name}}</a>
+   </li>
+</ul>

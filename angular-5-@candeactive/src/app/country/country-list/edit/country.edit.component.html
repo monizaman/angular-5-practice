@@ -1,0 +1,8 @@
+<h3>Edit Country</h3>
+<p *ngIf="country"><b>Country Id: {{country.countryId }} </b></p>
+<form [formGroup]="countryForm" (ngSubmit)="onFormSubmit()">
+   <p> Name: <input formControlName="name"> </p>
+   <p> Capital: <input formControlName="capital"> </p>
+   <p> Currency: <input formControlName="currency"> </p>
+   <p> <button>Update</button> </p>
+</form> 

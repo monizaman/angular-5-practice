@@ -1,0 +1,10 @@
+<h3>Country List</h3>
+<div *ngFor="let country of countries | async" [ngClass]= "'sub-child-menu'">
+<p> {{country.countryId}} - {{country.name}} -
+    {{country.capital}} - {{country.currency}}
+	| <a [routerLink]="['edit', country.countryId]" routerLinkActive="active">Edit</a>
+</p>
+</div>
+<div [ngClass]= "'sub-child-container'">
+	<router-outlet></router-outlet>  
+</div> 

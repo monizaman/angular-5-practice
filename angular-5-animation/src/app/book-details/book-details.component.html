@@ -1,0 +1,4 @@
+<h3>Book Details</h3>
+<p *ngFor="let book of books | async"> 
+	<b>Id:</b> {{book.id}}, <b>Name:</b> {{book.name}}, <b>Author:</b> {{book.author}}
+</p>

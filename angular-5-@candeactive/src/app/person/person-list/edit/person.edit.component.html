@@ -1,0 +1,7 @@
+<h3>Edit Person</h3>
+<p *ngIf="person"><b>Person Id: {{person.personId }} </b></p>
+<form [formGroup]="personForm" (ngSubmit)="onFormSubmit()">
+   <p> Name: <input formControlName="name"> </p>
+   <p> City: <input formControlName="city"> </p>
+   <p> <button>Update</button> </p>
+</form> 
