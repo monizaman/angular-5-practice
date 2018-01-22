@@ -1,0 +1,15 @@
+<div class="example-container">
+	
+<form class="form-horizontal" [formGroup]="articleForm" (ngSubmit)="onArticleFormSubmit()">
+  <mat-form-field class="form-field"> 
+    <input matInput placeholder="Input" formControlName="title">
+  </mat-form-field>
+
+  <mat-form-field class="form-field">
+    <textarea matInput placeholder="Textarea" formControlName="category"></textarea>
+  </mat-form-field>
+  <button mat-raised-button color="primary" type="submit">Submit</button>
+</form>
+</div>
+
+  

@@ -1,0 +1,40 @@
+<mat-toolbar color="primary" class="text-center">
+  <span>Angular 5 CRUD Example</span>
+</mat-toolbar>
+
+<div class="example-container mat-elevation-z8">
+
+  <mat-table #table [dataSource]="dataSource">
+
+    <!-- Position Column -->
+    <ng-container matColumnDef="id">
+      <mat-header-cell *matHeaderCellDef> No. </mat-header-cell>
+      <mat-cell *matCellDef="let article"> {{article.id}} </mat-cell>
+    </ng-container>
+
+    <!-- Name Column -->
+    <ng-container matColumnDef="title">
+      <mat-header-cell *matHeaderCellDef> Title </mat-header-cell>
+      <mat-cell *matCellDef="let article"> {{article.title}} </mat-cell>
+    </ng-container>
+
+    <!-- Weight Column -->
+    <ng-container matColumnDef="category">
+      <mat-header-cell *matHeaderCellDef> Category </mat-header-cell>
+      <mat-cell *matCellDef="let article"> {{article.category}} </mat-cell>
+    </ng-container>
+
+    <ng-container matColumnDef="action">
+      <mat-header-cell *matHeaderCellDef> Action </mat-header-cell>
+      <mat-cell *matCellDef="let article"> 
+         <button mat-raised-button color="primary" (click)="loadArticleToEdit(article.id)">Edit</button>
+         <button mat-raised-button color="warn" (click)="deleteArticle(article.id)">Delete</button>
+      </mat-cell>
+    </ng-container>
+
+
+    <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
+    <mat-row *matRowDef="let row; columns: displayedColumns;"></mat-row>
+  </mat-table>
+</div>
+<button mat-raised-button color="primary" routerLink="/create-article">Create New Article</button>
